@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Driver Roster System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Driver Roster Management</h1>
+
+    <!-- Login Section -->
+    <div id="loginSection">
+        <h2>Admin Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="loginError"></p>
+    </div>
+
+    <!-- Roster Section -->
+    <div id="rosterSection" style="display:none;">
+
+        <div class="top-bar">
+            <input type="text" id="searchInput" placeholder="Search driver..." onkeyup="searchDriver()">
+            <button onclick="downloadCSV()">Download</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Add Driver Form -->
+        <h3>Add / Edit Driver</h3>
+        <input type="hidden" id="editIndex">
+        <input type="text" id="driverName" placeholder="Driver Name">
+        <input type="text" id="vehicleNo" placeholder="Vehicle No">
+        <input type="text" id="route" placeholder="Route">
+        <input type="text" id="shift" placeholder="Shift">
+        <button onclick="saveDriver()">Save</button>
+
+        <table id="rosterTable">
+            <thead>
+                <tr>
+                    <th>Driver Name</th>
+                    <th>Vehicle No</th>
+                    <th>Route</th>
+                    <th>Shift</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

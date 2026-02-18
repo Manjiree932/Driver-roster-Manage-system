@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Driver Roster System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Driver Roster Management</h1>
+
+    <div id="loginSection">
+        <h2>Admin Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="loginError"></p>
+    </div>
+
+    <div id="rosterSection" style="display:none;">
+        <div class="top-bar">
+            <input type="text" id="searchInput" placeholder="Search driver..." onkeyup="searchDriver()">
+            <button onclick="downloadCSV()">Download</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <table id="rosterTable">
+            <thead>
+                <tr>
+                    <th>Driver Name</th>
+                    <th>Vehicle No</th>
+                    <th>Route</th>
+                    <th>Shift</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rahul Kumar</td>
+                    <td>UP32AB1234</td>
+                    <td>Route A</td>
+                    <td>Morning</td>
+                </tr>
+                <tr>
+                    <td>Amit Singh</td>
+                    <td>UP32CD5678</td>
+                    <td>Route B</td>
+                    <td>Evening</td>
+                </tr>
+                <tr>
+                    <td>Ravi Sharma</td>
+                    <td>UP32EF9012</td>
+                    <td>Route C</td>
+                    <td>Night</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
